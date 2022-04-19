@@ -10,6 +10,8 @@ EarthDaily Home Assignment.
 -http://krealtors-alb01-2008996948.us-west-1.elb.amazonaws.com:5000/docs
 
 ## ATM Table Info
+
+```sql
 CREATE TABLE public.atm (
 	id serial4 NOT NULL,
 	address varchar(256) NOT NULL,
@@ -18,5 +20,6 @@ CREATE TABLE public.atm (
 	bgeom bytea NULL, /*binary geometry field*/
 	CONSTRAINT atm_pkey PRIMARY KEY (id)
 );
+```
 
 
