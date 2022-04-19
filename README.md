@@ -6,5 +6,5 @@ EarthDaily Home Assignment.
 - postgis
 - Flask2.1.1
 
-## RestAPI
+## RestAPI Document
 -http://krealtors-alb01-2008996948.us-west-1.elb.amazonaws.com:5000/docs
