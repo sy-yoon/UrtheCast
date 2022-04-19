@@ -1,2 +1,10 @@
 # UrtheCast
-Manages directory of ATM machines in Vancouver.
+EarthDaily Home Assignment.
+
+## Environments
+- python3.10
+- postgis
+- Flask2.1.1
+
+## RestAPI
+-http://krealtors-alb01-2008996948.us-west-1.elb.amazonaws.com:5000/docs
