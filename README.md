@@ -5,6 +5,7 @@ EarthDaily Home Assignment.
 - python3.10
 - postgis
 - Flask2.1.1
+- flask-restx0.5.1
 - AWS ALB + EC2
 
 ## RestAPI Document
