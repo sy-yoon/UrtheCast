@@ -1,0 +1,35 @@
+#docker-compose up -d
+version: '3.1'
+services:
+  earth-db:
+    image: 'postgis/postgis'
+    restart: always
+    networks:
+      - earth-net
+    ports:
+      - 5432:5432
+    volumes:
+      - 'postgresql_data:/var/lib/postgresql/data'
+    environment:
+      - POSTGRES_PASSWORD=1qaz2wsx!!
+  
+  earth-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000
+    networks:
+      - earth-net
+    depends_on:
+      - earth-db
+    environment:
+      - FLASK_APP=/app/earthdaily
+      - SQLALCHEMY_DATABASE_URI=postgresql://postgres:1qaz2wsx!!@earth-db:5432/postgres  
+    restart: always
+  
+volumes:
+  postgresql_data:
+
+networks:
+  earth-net:
